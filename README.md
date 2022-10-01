@@ -26,11 +26,11 @@ Users should be able to:
 - See their own IP address on the map on the initial page load
 - Search for any IP addresses or domains and see the key information and location
 
-### Screenshot
+### Screenshots
 
-![desktop](./https://i.postimg.cc/xT286y10/localhost-3000-3.png)
+![desktop](/https://i.postimg.cc/xT286y10/localhost-3000-3.png)
 
-![mobile](./https://i.postimg.cc/WbsvC9L1/localhost-3000-i-Phone-SE.png)
+![mobile](/https://i.postimg.cc/WbsvC9L1/localhost-3000-i-Phone-SE.png)
 
 ### Links
 
