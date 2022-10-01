@@ -1,0 +1,113 @@
+.detailsComponentContainer {
+  position: absolute;
+  bottom: -80px;
+  left: 165px;
+  width: 1110px;
+  height: 160px;
+  border-radius: 15px;
+  padding-top: 36px;
+  background-color: var(--color-White);
+  z-index: 1;
+  display: flex;
+  transition: 200ms ease-in;
+}
+.detailsComponentDiv {
+  display: flex;
+  flex-direction: column;
+  padding-left: 32px;
+  width: 20%;
+}
+.detailTitle {
+  font-size: 0.7rem;
+  color: var(--color-DarkGray);
+  margin-bottom: 13px;
+}
+.detail {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.detailsCmd {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.detailsCmdClose {
+  cursor: pointer;
+}
+.detailsCmdClose:hover {
+  color: var(--color-VeryDarkGray);
+  transform: rotate(90deg);
+}
+
+.detailsCmdOpen {
+  cursor: pointer;
+}
+.detailsCmdOpen:hover {
+  color: var(--color-VeryDarkGray);
+}
+
+@media (max-width: 1300px) {
+  .detailsComponentContainer {
+    left: 85px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .detailsComponentContainer {
+    width: 950px;
+  }
+  .detailsComponentDiv {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    width: 25%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .detailsComponentContainer {
+    width: 900px;
+    left: 5%;
+  }
+}
+
+@media (max-width: 950px) {
+  .detailsComponentContainer {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 27px;
+    padding-bottom: 24px;
+    width: 90%;
+    height: 295px;
+    bottom: -180px;
+  }
+  .detailsComponentDiv {
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
+    margin-bottom: 24px;
+  }
+  .detailTitle {
+    margin-bottom: 7px;
+    text-align: center;
+    line-height: 11.85px;
+  }
+  .detail {
+    line-height: 23.7px;
+  }
+}
+
+@media (max-width: 375px) {
+  .detailsComponentContainer {
+    left: 24px;
+    width: 327px;
+  }
+  .detailTitle {
+    font-size: 0.6rem;
+  }
+  .detail {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,83 @@
+.inputForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 555px;
+}
+.ipInput {
+  height: 58px;
+  width: 794px;
+  border: none;
+  border-radius: 15px 0 0 15px;
+  color: var(--color-VeryDarkGray);
+  letter-spacing: 0.008em;
+  padding: 1rem 1.4rem;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.button {
+  width: 58px;
+  height: 58px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  border: none;
+  border-radius: 0 15px 15px 0;
+  font-size: 1.5rem;
+  color: var(--color-White);
+  background-color: var(--color-Black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:hover {
+  background-color: var(--color-VeryDarkGray);
+  cursor: pointer;
+}
+.button:disabled {
+  color: var(--color-DarkGray);
+}
+.ipInput:hover,
+.ipInput:focus {
+  cursor: pointer;
+  outline: none;
+}
+.ipInput::placeholder {
+  color: var(--color-DarkGray);
+}
+
+.errorDiv {
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-input-error);
+  user-select: none;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .inputForm {
+    width: 90%;
+  }
+}
+
+@media (max-width: 375px) {
+  .inputForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 327px;
+  }
+}
+
+@media (max-width: 280px) {
+  .inputForm {
+    width: 90%;
+  }
+}
