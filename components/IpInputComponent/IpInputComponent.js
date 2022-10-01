@@ -23,7 +23,9 @@ const IpInputComponent = ({
     (async () => {
       try {
         setLoading(true);
-        const data = await axios.get("./api/getGeoData");
+        //const data = await axios.get("./api/getGeoData");
+        const data = await axios.get("https://geo.ipify.org/api/v2/country,city?apiKey=at_WBG8VtYBnjFusJ0tpgGEPLmpn3gcA");
+
         const { ip, isp } = data?.data;
         const { city, country, lat, lng, postalCode, timezone } =
           data?.data?.location;
