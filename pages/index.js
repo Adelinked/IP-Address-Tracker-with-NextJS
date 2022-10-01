@@ -7,15 +7,15 @@ import IpInputComponent from "../components/IpInputComponent";
 import DetailsComponent from "../components/DetailsComponent";
 import Map from "../components/Map";
 import ChangeView from "../components/ChangeView";
-const DEFAULT_CENTER = [38.907132, -77.036546];
+const DEFAULT_CENTER = [37.38605, -122.08385];
 
 
 export default function Home() {
-  const [ipAddress, setIpAddress] = useState("");
-  const [position, setPosition] = useState(null);
-  const [timeZone, setTimeZone] = useState("");
-  const [location, setLocation] = useState("");
-  const [isp, setIsp] = useState("");
+  const [ipAddress, setIpAddress] = useState("8.8.8.8");
+  const [position, setPosition] = useState(DEFAULT_CENTER);
+  const [timeZone, setTimeZone] = useState("-07:00");
+  const [location, setLocation] = useState("Mountain View, US 94035");
+  const [isp, setIsp] = useState("Google LLC");
   const [loading, setLoading] = useState(false);
 
   return (

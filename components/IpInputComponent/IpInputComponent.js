@@ -13,11 +13,13 @@ const IpInputComponent = ({
   loading,
   setLoading,
 }) => {
-  const [ipValue, setIpValue] = useState("");
+  const [ipValue, setIpValue] = useState("8.8.8.8");
   const [errors, setErrors] = useState({});
   const [touched, setTouched] = useState({});
 
   useEffect(() => {
+    document.getElementById("ipAddress").focus();
+
     (async () => {
       try {
         setLoading(true);
@@ -32,6 +34,7 @@ const IpInputComponent = ({
         setLocation(`${city}, ${country} ${postalCode}`);
         setPosition([lat, lng]);
       } catch (e) {
+        setErrors({ network: "unable to get your data (displaying default values)" });
       } finally {
         setLoading(false);
       }
@@ -54,7 +57,7 @@ const IpInputComponent = ({
       setLocation(`${city}, ${country} ${postalCode}`);
       setPosition([lat, lng]);
     } catch (e) {
-      setErrors({ network: "no Data available for this IP address" });
+      setErrors({ network: "no Data available for this IP address (displaying default values)" });
     } finally {
       setLoading(false);
     }
@@ -69,10 +72,11 @@ const IpInputComponent = ({
   };
 
   const formatIpAddress = (ipAddress) => {
-    return ipAddress
-      .replace(/(\.)+/g, ".")
-      .split("")
-      /*.map((i, index) => {
+    return (
+      ipAddress
+        .replace(/(\.)+/g, ".")
+        .split("")
+        /*.map((i, index) => {
         return Number.isInteger(Number(i)) &&
           Number.isInteger(Number(ipAddress[index - 1])) &&
           Number.isInteger(Number(ipAddress[index - 2])) && (
@@ -82,7 +86,8 @@ const IpInputComponent = ({
           : i
       }
       )*/
-      .join("");
+        .join("")
+    );
   };
   useEffect(() => {
     formValidate();
@@ -115,6 +120,7 @@ const IpInputComponent = ({
       </div>
       <form className={styles.inputForm} onSubmit={handleSubmit}>
         <input
+          id="ipAddress"
           name="ipAddress"
           className={styles.ipInput}
           value={ipValue}
